@@ -1,0 +1,121 @@
+
+// === 404-Section ========================================= >>>>>
+.section-404{    
+    overflow: hidden;
+}
+.wrapper-404{
+    padding: 190px 0;
+    @include media-breakpoint-down(xxl){
+        padding: 150px 0;
+    }
+    @include media-breakpoint-down(sm){
+        padding: 130px 0;
+    }    
+}
+.circle-404 {
+    position: absolute;
+    --#{$prefix}circle-404-size: 480px;
+    border-radius: 50%;
+    width: var(--#{$prefix}circle-404-size);
+    height: var(--#{$prefix}circle-404-size);
+    background: var(--#{$prefix}body-color-style-2);
+    @include media-breakpoint-down(xxl){
+        --#{$prefix}circle-404-size: 400px;
+    }
+    @include media-breakpoint-down(xl){
+        --#{$prefix}circle-404-size: 340px;
+    }
+    @include media-breakpoint-down(lg){
+        --#{$prefix}circle-404-size: 280px;
+    }
+    @include media-breakpoint-down(lg){
+        --#{$prefix}circle-404-size: 172px;
+    }
+    @include media-breakpoint-down(sm){
+        --#{$prefix}circle-404-size: 140px;
+    }
+}
+.circle-left-top{
+    top: calc(var(--#{$prefix}circle-404-size) * -0.5);
+    left: calc(var(--#{$prefix}circle-404-size) * -0.5);
+}
+.circle-right-bottom{    
+    bottom: calc(var(--#{$prefix}circle-404-size) * -0.5);
+    right: calc(var(--#{$prefix}circle-404-size) * -0.5);    
+}
+.icon-top{
+    position: relative;
+    left: 120px;
+    @include media-breakpoint-down(xl){
+        left: 90px;
+    }
+    @include media-breakpoint-down(xl){
+        left: 20px;
+    }
+}
+.icon-bottom{
+    position: relative;
+    right: 120px;
+    @include media-breakpoint-down(xl){
+        right: 90px;
+    }
+    @include media-breakpoint-down(xl){
+        right: 20px;
+    }
+}
+.extra-huge-text{
+    font-size: 260px;
+    @include media-breakpoint-down(xxl){
+        font-size: 220px;
+    }
+    @include media-breakpoint-down(xl){
+        font-size: 180px;
+    }
+    @include media-breakpoint-down(lg){
+        font-size: 140px;
+    }
+    @include media-breakpoint-down(sm){
+        font-size: 100px;
+    }
+}
+.huge-text{
+    font-size: 60px;
+    font-weight: 600;
+    @include media-breakpoint-down(xxl){
+        font-size: 50px;
+    }
+    @include media-breakpoint-down(lg){
+        font-size: 40px;
+    }
+    @include media-breakpoint-down(sm){
+        font-size: 32px;
+    }
+}
+@include media-breakpoint-down(lg){
+    .star-light-icon svg{
+        width: 80px;
+    }
+    .star-fill-icon svg{
+        width: 50px;
+    }
+    .star-top-icons{
+        top: 20%;
+    }    
+}
+@include media-breakpoint-up(sm){
+.star-bottom-icons{
+        bottom: 0;
+    }
+}
+@include media-breakpoint-down(sm){
+    .star-light-icon svg{
+        width: 60px;
+    }
+    .star-fill-icon svg{
+        width: 40px;
+    }
+    .star-bottom-icons{
+        bottom: -90px;
+    }
+}
+// === 404-Section ========================================= >>>>>

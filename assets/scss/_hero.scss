@@ -1,0 +1,758 @@
+
+// === Hero-Section ========================================= >>>>>
+.section-hero{
+    .subtitle{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--#{$prefix}primary);
+        }
+    }
+}
+// === Hero-Section ========================================= >>>>>
+
+
+
+// === Hero-1 ========================================= >>>>>
+.hero-1{       
+    --#{$prefix}hero-1-padding: 45px;
+    --#{$prefix}hero-inner-text-width: 680px;
+    --#{$prefix}hero-inner-text-spacing: -40px;
+    --#{$prefix}hero-inner-text-padding: 164px 0 160px 0;
+    .hero-wrapper {        
+        --bg-parallax-image: url(../images/hero-bg-1.jpg);    
+        --bg-parallax-opacity: 1;
+        padding-top: var(--#{$prefix}hero-1-padding);        
+    } 
+    .hero-inner-text{        
+        position: relative;
+        left: var(--#{$prefix}hero-inner-text-spacing);
+        max-width: var(--#{$prefix}hero-inner-text-width);
+        padding: var(--#{$prefix}hero-inner-text-padding);
+        z-index: 1;
+    }
+    @include media-breakpoint-down(xl){
+        --#{$prefix}hero-inner-text-width: 485px;
+        --#{$prefix}hero-inner-text-padding: 60px 0 100px 0;
+        .hero-image-1{
+            left: 3%;
+            max-width: 455px;            
+        }        
+    }
+    @include media-breakpoint-down(lg){
+        --#{$prefix}hero-inner-text-width: 380px;
+        --#{$prefix}hero-inner-text-spacing: 0;
+        --#{$prefix}hero-inner-text-padding: 30px 0 50px 0;
+        .hero-image-1{
+            max-width: 420px; 
+            left: 0;          
+        }               
+    }    
+    @include media-breakpoint-down(md){
+        --#{$prefix}hero-1-padding: 0;
+        --#{$prefix}hero-inner-text-spacing: 0;
+        --#{$prefix}hero-inner-text-padding: 70px 0 550px 0;
+        .hero-image-1{
+            left: 10%;
+            width: 400px;            
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .hero-image-1{
+            left: 1%;            
+        }        
+    }
+}
+// === Hero-1 ========================================= >>>>>
+
+
+
+// === Hero-3 ========================================= >>>>>
+.hero-3{       
+    --#{$prefix}hero-1-padding: 45px;
+    --#{$prefix}hero-inner-text-width: 680px;
+    --#{$prefix}hero-inner-text-padding: 120px 0 204px 0;
+    .hero-wrapper {        
+        --bg-parallax-image: url(../images/hero-bg-3.jpg);    
+        --bg-parallax-opacity: 1;
+        padding-top: var(--#{$prefix}hero-1-padding);        
+    } 
+    .hero-inner-text{        
+        position: relative;
+        max-width: var(--#{$prefix}hero-inner-text-width);
+        padding: var(--#{$prefix}hero-inner-text-padding);
+        z-index: 1;
+    } 
+    @include media-breakpoint-down(xl){
+        --#{$prefix}hero-inner-text-width: 485px;
+        --#{$prefix}hero-inner-text-padding: 60px 0 100px 0;
+        .hero-image-3{
+            right: 3%;
+            max-width: 455px;            
+        }        
+    }
+    @include media-breakpoint-down(lg){
+        --#{$prefix}hero-inner-text-width: 380px;
+        --#{$prefix}hero-inner-text-padding: 30px 0 50px 0;
+        .hero-image-3{
+            max-width: 420px;            
+        }               
+    }
+    @include media-breakpoint-down(md){
+        --#{$prefix}hero-1-padding: 0;
+        --#{$prefix}hero-inner-text-width: 100%;
+        --#{$prefix}hero-inner-text-padding: 70px 0 550px 0;
+        .hero-image-3{
+            max-width: 400px;
+            right: 10%;            
+        }    
+    }
+    @include media-breakpoint-down(sm){
+        .hero-image-3{
+            right: 1%;            
+        }        
+    }
+}
+// === Hero-3 ========================================= >>>>>
+
+
+// === Hero-2 ========================================= >>>>>
+.hero-2{ 
+    .hero-wrapper {        
+        --bg-parallax-image: url(../images/hero-bg-2.jpg);    
+        --bg-parallax-opacity: 1;               
+    } 
+}
+.hero-2,.hero-4{           
+    --#{$prefix}hero-inner-text-padding: 132px 0 230px 0;
+    --#{$prefix}hero-text-width: 590px;
+    overflow: hidden;        
+    .hero-inner-text{   
+        padding: var(--#{$prefix}hero-inner-text-padding);
+        z-index: 2;
+    }  
+    .hero-text{   
+        max-width: var(--#{$prefix}hero-text-width);
+    }  
+    @include media-breakpoint-down(xl){
+        --#{$prefix}hero-inner-text-padding: 90px 0 140px 0;        
+    }
+    @include media-breakpoint-down(lg){
+        --#{$prefix}hero-inner-text-padding: 155.07px 0;        
+    }
+    @include media-breakpoint-down(md){
+        --#{$prefix}hero-inner-text-padding: 140px 0 200px 0;        
+    }
+}
+// === Hero-2 ========================================= >>>>>
+
+
+// === Hero-3 ========================================= >>>>>
+.hero-5{
+    .hero-wrapper {        
+        --bg-parallax-image: url(../images/hero-bg-5.jpg);    
+        --bg-parallax-opacity: 1; 
+        @include media-breakpoint-down(md){
+            --bg-parallax-image: url(../images/hero-bg-5-sm.jpg);            
+        }      
+    } 
+}
+.hero-6{
+    .hero-wrapper {        
+        --bg-parallax-image: url(../images/hero-bg-6.jpg);    
+        --bg-parallax-opacity: 1;   
+        @include media-breakpoint-down(md){
+            --bg-parallax-image: url(../images/hero-bg-5-sm.jpg);            
+        }            
+    } 
+}
+.hero-image-responsive{
+    height: 360px;
+    img{
+        object-fit: cover;
+        height: 100%;
+    }
+}
+.hero-5,.hero-6{       
+    --#{$prefix}hero-inner-text-width: 830px;
+    --#{$prefix}hero-text-width: 590px;
+    --#{$prefix}hero-inner-text-padding: 255px 0 282px 0;
+    --#{$prefix}hero-arrow-icon-right-spacing: -160px;
+    --#{$prefix}hero-arrow-icon-bottom-spacing: -65px;
+    .hero-inner-text{        
+        position: relative;
+        max-width: var(--#{$prefix}hero-inner-text-width);
+        padding: var(--#{$prefix}hero-inner-text-padding);
+        z-index: 1;
+    } 
+    .hero-text{
+        max-width: var(--#{$prefix}hero-text-width); 
+    }
+    .hero-arrow-icon{
+        position: absolute;
+        right: var(--#{$prefix}hero-arrow-icon-right-spacing);
+        bottom: var(--#{$prefix}hero-arrow-icon-bottom-spacing);        
+    }
+    @include media-breakpoint-down(xl){
+        --#{$prefix}hero-text-width: 480px;
+        --#{$prefix}hero-inner-text-padding: 130px 0 180px 0;
+        .hero-image-4{
+            width: 542px;            
+        }    
+        .hero-text{
+            font-size: 19px;
+        }    
+        .hero-circle{
+            --#{$prefix}circle-size: 850px;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        --#{$prefix}hero-inner-text-width: 100%;
+        --#{$prefix}hero-inner-text-padding: 90px 0 130px 0;
+        --#{$prefix}hero-arrow-icon-right-spacing: -95px;
+        --#{$prefix}hero-arrow-icon-bottom-spacing: -48px;
+        .hero-image-4{
+            width: 405px;     
+            right: 2%;       
+        }   
+        .hero-circle{
+            --#{$prefix}circle-size: 670px;
+        }
+        .hero-arrow-icon{
+            svg{
+                width: 50px;
+            }       
+        }
+    }
+    @include media-breakpoint-down(md){
+        --#{$prefix}hero-inner-text-padding: 70px 0 130px 0;         
+        .hero-image-4{
+            position: relative;      
+            width: fit-content;
+            left: calc(50% - 188px); 
+        } 
+        .hero-text{
+            font-size: 16px !important;
+        }
+        .flag-image{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+        .star-left-icon{
+            position: absolute;
+            left: 55px;
+            bottom: 170px;
+        }
+        .star-right-icon{
+            position: absolute;
+            right: 50px;
+            bottom: 330px;
+        }
+    }
+    @include media-breakpoint-down(sm){
+        --#{$prefix}hero-inner-text-padding: 70px 0 120px 0; 
+        --#{$prefix}hero-arrow-icon-right-spacing: -55px;
+        --#{$prefix}hero-arrow-icon-bottom-spacing: -55px;
+        .hero-arrow-icon{
+            svg{
+                width: 40px;
+            }       
+        }
+    }
+    
+   
+}
+.hero-star-icon{
+    animation: star-rotate 30s infinite linear;
+}
+
+@keyframes star-rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+    }
+}
+.heroSwiper{
+    --swiper-pagination-color: var(--#{$prefix}primary);
+    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 50%;
+    }
+    .swiper-pagination-bullet {
+        --swiper-pagination-bullet-horizontal-gap: 8px;
+        --swiper-pagination-bullet-width: 14px;
+        --swiper-pagination-bullet-height: 14px;
+    }
+    
+}
+
+// === Hero-3 ========================================= >>>>>
+
+
+
+// === Banner-1 ========================================= >>>>>
+.banner-1 {        
+    --bg-parallax-image: url(../images/banner-1.jpg);    
+    --bg-parallax-opacity: 1;       
+    padding: 120px 0;    
+    --#{$prefix}margin-top-style-3: 100px;
+    margin-top: var(--#{$prefix}margin-top-style-3);
+    @include media-breakpoint-down(xxl){
+        --#{$prefix}margin-top-style-3: 84px;
+    }    
+    @include media-breakpoint-down(lg) {
+        padding: 140px 0 60px 0;
+        --#{$prefix}margin-top-style-3: 66px;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(var(--#{$prefix}secondary-rgb), .6);
+        z-index: 1;
+    }
+}
+// === Banner-1 ========================================= >>>>>
+
+
+
+// === Hero-Image-1 ========================================= >>>>>
+.hero-image-1{
+    position: absolute;
+    bottom: 0;
+    left: 12.5%;
+}
+// === Hero-Image-1 ========================================= >>>>>
+
+
+
+// === Hero-Image-3 ========================================= >>>>>
+.hero-image-3{
+    position: absolute;
+    bottom: 0;
+    right: 8%;
+}
+// === Hero-Image-3 ========================================= >>>>>
+
+
+// === Hero-Image-4 ========================================= >>>>>
+.hero-image-4{
+    position: absolute;
+    bottom: 0;
+    right: 4%;
+    z-index: 2;
+}
+// === Hero-Image-4 ========================================= >>>>>
+
+.hero-circle{
+    --#{$prefix}circle-size: 1228px;
+    --#{$prefix}circle-size-division: calc(var(--#{$prefix}circle-size) / 3);
+    --#{$prefix}circle-size-spacing: calc( 2 * var(--#{$prefix}circle-size-division));
+
+    position: absolute;
+    bottom: calc(-1 * var(--#{$prefix}circle-size-spacing) - 100px);
+    right: -80px;
+    width: var(--#{$prefix}circle-size);
+    height: var(--#{$prefix}circle-size);
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+}
+
+
+
+// === Mosque-Image-1 ========================================= >>>>>
+.mosque-image-1{
+    position: absolute;
+    bottom: 0;
+    right: 30px;    
+    @include media-breakpoint-down(xl){
+        width: 440px;
+    }
+    @include media-breakpoint-down(lg){
+        width: 360px;
+        right: 10px;
+    }
+    @include media-breakpoint-down(md){
+        display: none;
+    }
+}
+// === Mosque-Image-1 ========================================= >>>>>
+
+
+
+// === Mosque-Image-2 ========================================= >>>>>
+.mosque-image-2{
+    position: absolute;
+    bottom: 0;
+    left: 0;    
+    @include media-breakpoint-down(xxl){
+        width: 660px;
+    }
+    @include media-breakpoint-down(xl){
+        width: 630px;
+    }
+    @include media-breakpoint-down(sm){
+        left: -62px;
+    }     
+}
+// === Mosque-Image-2 ========================================= >>>>>
+.margin-top-style-1{
+    --#{$prefix}margin-top-style-1: 107px;
+    margin-top: var(--#{$prefix}margin-top-style-1);
+    @include media-breakpoint-down(xxl){
+        --#{$prefix}margin-top-style-1: 90px;
+    }
+    @include media-breakpoint-down(lg){
+        --#{$prefix}margin-top-style-1: 66px;
+    }
+}
+.margin-top-style-2{
+    --#{$prefix}margin-top-style-2: 159px;
+    margin-top: var(--#{$prefix}margin-top-style-2);
+    @include media-breakpoint-down(xxl){
+        --#{$prefix}margin-top-style-2: 143px;
+    }
+    @include media-breakpoint-down(lg){
+        --#{$prefix}margin-top-style-2: 66px;
+    }
+}
+.margin-top-style-3{
+    --#{$prefix}margin-top-style-3: 100px;
+    margin-top: var(--#{$prefix}margin-top-style-3);
+    @include media-breakpoint-down(xxl){
+        --#{$prefix}margin-top-style-3: 84px;
+    }
+    @include media-breakpoint-down(lg){
+        --#{$prefix}margin-top-style-3: 66px;
+    }
+}
+
+@media screen and  (max-width: 400.9px){
+    .hero-5,.hero-6{
+        .hero-heading{
+            font-size: 33px;
+        }
+        .btn-lg{
+           --#{$prefix}btn-padding-y: .8rem;
+           --#{$prefix}btn-padding-x: 1.5rem;
+           --#{$prefix}btn-font-size: 16px;
+        }
+        .star-left-icon{
+            left: 27px;
+        }
+    }
+}
+
+
+@media screen and  (max-width: 574.9px){
+    .hero-heading{
+        font-size: 2.3rem;
+    }
+    .hero-text{
+        font-size: 20px !important;
+    }
+    
+}
+
+@media screen and (min-width: 575px) and (max-width: 767.9px){
+    .hero-heading{
+        font-size: 2.7rem;
+    }
+    .hero-text{
+        font-size: 21px !important;
+    }    
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991.9px){ 
+    .hero-text{
+        font-size: 18px !important;
+    }
+    .hero-heading{
+        font-size: 2.5rem;
+    }    
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1199px){  
+    .hero-heading{
+        font-size: 3rem;
+    }    
+}
+@media screen and (min-width: 320px) and (max-width: 365.9px){
+    .heroSwiper{
+        .hero-1,.hero-3{
+            height: 1060px;
+        }
+    }
+    .hero-image-1 {
+        left: -2%;
+    }
+    .hero-image-3 {
+        right: -2%;
+    }
+}
+@media screen and (min-width: 366px) and (max-width: 549.9){
+    .heroSwiper{
+        .hero-1,.hero-3{
+            height: 1069px;
+        }
+    }
+}
+@media screen and (min-width: 550px) and (max-width: 767.9px){    
+    .heroSwiper{
+        .hero-1,.hero-3{
+            height: 1065px;
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px){     
+    .heroSwiper{
+        .hero-1,.hero-3{
+            height: 577px;
+        }
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1059.9px){     
+    .heroSwiper{
+        .hero-1,.hero-3{
+            height: 627px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){    
+    .mosque-image-1{
+        width: 420px;
+    }
+    .hero-heading{
+        font-size: 54px;
+    }
+    .hero-1,.hero-3{
+        --#{$prefix}hero-1-padding: 0;
+        --#{$prefix}hero-inner-text-width: 484px;
+        --#{$prefix}hero-inner-text-padding: 91px 0;
+        .subtitle{
+            font-size: 21px;
+        }        
+        .hero-buttons{
+            position: relative;
+            top: -10px;
+        }
+    }
+    .hero-text{
+        font-size: 20px !important;
+    }
+    .hero-image-1 {
+        left: 11%;
+        width: 400px;
+    }
+    .hero-image-3 {
+        right: 11%;
+        width: 400px;
+    }
+    .hero-2,.hero-4{           
+        --#{$prefix}hero-inner-text-padding: 80px 0 120px 0;
+    }
+    .hero-image-4{
+        width: 560px;
+    }
+    .hero-5,.hero-6{       
+        --#{$prefix}hero-inner-text-padding: 125px 0 170px 0;
+        --#{$prefix}hero-text-width: 538px;
+    }
+    .hero-circle{
+        --#{$prefix}circle-size: 845px;
+    }
+    
+    .hero-buttons{
+        gap: 40px;
+        .btn.btn-lg{
+            --#{$prefix}btn-padding-y: 1rem;
+            --#{$prefix}btn-padding-x: 1.5rem;
+            --#{$prefix}btn-font-size: 16px;
+            --#{$prefix}btn-font-weight: 600;
+        }
+    }    
+}
+
+@media screen and (min-width: 1400.1px) and (max-width: 1620px){
+    .mosque-image-1{
+        width: 490px;
+    }
+    .mosque-image-2{
+        width: 760px;
+    }
+    .hero-heading{
+        font-size: 54px;
+    }
+    .hero-1, .hero-3{
+        --#{$prefix}hero-1-padding: 0;
+        --#{$prefix}hero-inner-text-width: 542px;
+        --#{$prefix}hero-inner-text-padding: 104px 0;
+        .subtitle{
+            font-size: 22px;
+        }        
+        .hero-buttons{
+            position: relative;
+            top: -10px;
+        }
+    }
+    .hero-text{
+        font-size: 22px !important;
+    }
+    .hero-2,.hero-4{           
+        --#{$prefix}hero-inner-text-padding: 100px 0 150px 0;
+    }
+    .hero-image-1 {
+        left: 14%;
+        width: 460px;
+    }
+    .hero-image-3 {
+        right: 14%;
+        width: 460px;
+    }
+    .hero-image-4{
+        width: 630px;
+        right: 6%;
+    }
+    .hero-5,.hero-6{       
+        --#{$prefix}hero-inner-text-width: 698px;
+        --#{$prefix}hero-inner-text-padding: 150px 0 200px 0;
+    }
+    .hero-circle{
+        --#{$prefix}circle-size: 1000px;
+    }
+    .hero-buttons{
+        .btn.btn-lg{
+            --#{$prefix}btn-padding-y: 1rem;
+            --#{$prefix}btn-padding-x: 1.5rem;
+            --#{$prefix}btn-font-size: 16px;
+            --#{$prefix}btn-font-weight: 600;
+        }
+    }
+    .donate-2{
+        --#{$prefix}donate-wrapper-position: -80px;
+    }
+}
+
+@media screen and (min-width: 1621px) and (max-width: 1800px){
+    .hero-1{
+        .hero-image-1{
+            left: 2%;
+        }
+    }
+}
+
+@media screen and (min-width: 1621px){
+    .hero-heading{
+        font-size: 76px;
+    }
+}
+// === Hero Responsive Css ========================================= >>>>>
+
+
+// === Hero Slider ========================================= >>>>>
+.swiper-slide-active{  
+    .hero-1{        
+        .subtitle{
+            animation-name: fadeInRightBig;
+            animation-duration: 1s;
+        }
+        .hero-heading{
+            animation-name: fadeInRightBig;
+            animation-duration: 1.4s;
+        }
+        .hero-text{
+            animation-name: fadeInRightBig;
+            animation-duration: 1.7s;
+        } 
+        .hero-buttons{
+            animation-name: fadeInRightBig;
+            animation-duration: 1.9s;
+        }     
+        
+        .hero-image-1{
+            animation-name: slideInLeft;
+            animation-duration: 2.5s;
+        }
+        .mosque-image-1{
+            animation-name: slideInUp;
+            animation-duration: 2.3s;
+        }
+    }    
+    
+    .hero-2, .hero-4{     
+        .hero-heading{
+            animation-name: slideInUp;
+            animation-duration: 1.8s;
+        } 
+        .hero-text{
+            animation-name: slideInUp;
+            animation-duration: 2.4s;
+        } 
+        .hero-button{
+            animation-name: slideInUp;
+            animation-duration: 2.8s;
+        }           
+        .mosque-image-2{
+            animation-name: slideInUp;
+            animation-duration: 2.2s;
+        }            
+    } 
+
+    .hero-3{        
+        .subtitle{
+            animation-name: fadeInLeftBig;
+            animation-duration: 1s;
+        }
+        .hero-heading{
+            animation-name: fadeInLeftBig;
+            animation-duration: 1.4s;
+        }
+        .hero-text{
+            animation-name: fadeInLeftBig;
+            animation-duration: 1.7s;
+        }  
+        .hero-buttons{
+            animation-name: fadeInLeftBig;
+            animation-duration: 1.9s;
+        }             
+        .hero-image-3{
+            animation-name: slideInRight;
+            animation-duration: 2.5s;
+        }        
+    }  
+    .hero-5,.hero-6{
+        .hero-heading{
+            animation-name: fadeInLeftBig;
+            animation-duration: 1.4s;
+        }
+        .hero-text{
+            animation-name: fadeInLeftBig;
+            animation-duration: 1.7s;
+        }
+        .btn{
+            animation-name: fadeInLeftBig;
+            animation-duration: 1.9s;
+        }
+        .hero-image-4{
+            animation-name: slideInRight;
+            animation-duration: 2.5s;
+        }
+    }
+}
+// === Hero Slider ========================================= >>>>>

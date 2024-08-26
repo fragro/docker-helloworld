@@ -1,0 +1,232 @@
+// === Video-PopUp ========================================= >>>>>
+@keyframes pulse{
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+@keyframes pulse-2{
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(239, 239, 247, 1);
+        box-shadow: 0 0 0 0 rgba(239, 239, 247, 1);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 30px rgba(239, 239, 247, 0);
+        box-shadow: 0 0 0 30px rgba(239, 239, 247, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(239, 239, 247, 0);
+        box-shadow: 0 0 0 0 rgba(239, 239, 247, 0);
+    }
+}
+
+.video-popup{
+    --#{$prefix}video-icon-margin-left: 5px;
+    &.video-popup-style-1{
+        --#{$prefix}video-popup-area-size: 60px;
+        --#{$prefix}video-icon-bg: var(--#{$prefix}primary);       
+    }
+    &.video-popup-style-2{
+        --#{$prefix}video-popup-area-size: 40px;
+        --#{$prefix}video-icon-margin-left: 2px;
+        --#{$prefix}video-icon-bg: var(--#{$prefix}primary);
+    }
+    &.video-popup-style-3{
+        --#{$prefix}video-popup-area-size: 120px;
+        --#{$prefix}video-icon-bg: var(--#{$prefix}primary);
+        @include media-breakpoint-down(xxl){
+            --#{$prefix}video-popup-area-size: 80px;
+            svg{
+                width: 30px;
+            }
+        }
+        @include media-breakpoint-down(sm){        
+            --#{$prefix}video-popup-area-size: 60px;
+            svg{
+                width: 24px;
+            }
+        }
+    }
+    &.video-popup-style-4{
+        --#{$prefix}video-popup-area-size: 50px;
+        --#{$prefix}video-icon-bg: var(--#{$prefix}white);  
+        .video-icon{
+            color: var(--#{$prefix}primary);
+        }     
+    }
+    &.video-popup-style-5{
+        --#{$prefix}video-popup-area-size: 100px;
+        --#{$prefix}video-icon-bg: var(--#{$prefix}white);  
+        .video-icon{
+            color: var(--#{$prefix}primary);
+        } 
+        @include media-breakpoint-down(xxl){
+            --#{$prefix}video-popup-area-size: 80px;
+            svg{
+                width: 30px;
+            }
+        }
+        @include media-breakpoint-down(md){        
+            --#{$prefix}video-popup-area-size: 60px;
+            svg{
+                width: 24px;
+            }
+        }
+    }
+
+    &.video-popup-style-6{
+        --#{$prefix}video-popup-area-size: 75px;
+        --#{$prefix}video-icon-bg: var(--#{$prefix}primary);  
+        .video-icon{
+            color: var(--#{$prefix}white);
+        } 
+    }
+    
+    position: absolute;
+    top: calc(50% - (var(--#{$prefix}video-popup-area-size)) *.5);
+    left: calc(50% - (var(--#{$prefix}video-popup-area-size)) *.5);
+    background: var(--#{$prefix}video-icon-bg);
+    border-radius: 50%;
+    width: var(--#{$prefix}video-popup-area-size);
+    height: var(--#{$prefix}video-popup-area-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    animation: pulse 1.5s linear infinite;
+    .video-icon{
+      margin-left: var(--#{$prefix}video-icon-margin-left);
+    }    
+}
+// === Video-PopUp ========================================= >>>>>
+
+
+// === Video-Description ========================================= >>>>>
+.video-descriptions{
+    --#{$prefix}video-description-padding: 0 80px;
+    --#{$prefix}quote-icon-spacing: -35px;
+    padding: var(--#{$prefix}video-description-padding);
+
+    &.video-description-style-2{
+        --#{$prefix}video-description-padding: 0;
+        --#{$prefix}quote-icon-spacing: 0;
+        .quote-icon svg{        
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .quote-icon{        
+        position: relative;
+        top: var(--#{$prefix}quote-icon-spacing);
+    }    
+    @include media-breakpoint-down(xxl){        
+        --#{$prefix}video-description-padding: 20px;
+        --#{$prefix}quote-icon-spacing: -28px; 
+        .sign-light{
+            width: 200px;
+        }     
+        .video-description-text{
+            display: block;
+            display: -webkit-box;            
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }  
+    }
+    @include media-breakpoint-down(xl){        
+        --#{$prefix}video-description-padding: 14px;        
+    }
+
+    @include media-breakpoint-down(lg){        
+        --#{$prefix}quote-icon-spacing: -28px;  
+        --#{$prefix}video-description-padding: 48px;        
+    }
+    @include media-breakpoint-down(md){        
+        --#{$prefix}video-description-padding: 50px 38px;        
+    }
+    @include media-breakpoint-down(sm){        
+        --#{$prefix}video-description-padding: 35px 16px;
+        --#{$prefix}quote-icon-spacing: -24px; 
+    }
+}
+// === Video-Description ========================================= >>>>>
+
+
+// === Video-Quote Icon ========================================= >>>>>
+.video-icon{
+    --#{$prefix}video-icon-color: var(--#{$prefix}white);
+    color: var(--#{$prefix}video-icon-color);
+}
+.quote-icon{
+    color: #4D447B;
+    svg{
+        @include media-breakpoint-down(xxl){        
+            width: 60px;
+        }
+        @include media-breakpoint-down(xxl){        
+            width: 50px;
+        }        
+        @include media-breakpoint-down(sm){        
+            width: 34px;
+        }
+    }    
+}
+// === Video-Quote Icon ========================================= >>>>>
+
+
+@media screen and (min-width: 1401px) and (max-width: 1620px) { 
+    .video-descriptions{
+        --#{$prefix}video-description-padding: 30px;
+    }
+    .quote-icon{
+        svg{                   
+            width: 62px;                       
+        }    
+    }
+    .sign-light{
+        width: 220px;
+    }
+}
+
+
+// === Video-Bg Hero-4 ========================================= >>>>>
+.video-bg {
+    video{
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+    &.video-bg-overlay{    
+        --#{$prefix}overlay-width: 100%;
+        --#{$prefix}overlay-height: 85%;
+        --#{$prefix}overlay-bg: linear-gradient(180deg, rgba(0, 0, 0, .01) 14.06%, rgba(0, 0, 0, .7) 70.2%);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-image: var(--#{$prefix}overlay-bg);
+            width: var(--#{$prefix}overlay-width);
+            height: var(--#{$prefix}overlay-height);
+        }
+        @include media-breakpoint-down(sm){
+            --#{$prefix}overlay-height: 95%;
+        }
+    }
+}
+// === Video-Bg Hero-4 ========================================= >>>>>

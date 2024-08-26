@@ -1,0 +1,145 @@
+
+// === Testimonial ========================================= >>>>>
+.testimonial-image-wrapper img{
+    max-height: 320px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.testimonial-contents{
+    position: relative;
+    top: -30px;
+    z-index: 2;
+    @include media-breakpoint-down(lg){
+        top: 0;
+    }
+}
+
+.testimonial-text{
+    display: block;
+    display: -webkit-box;            
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.testimonial-2-wrapper{
+    --#{$prefix}testimonial-box-shadow: rgba(var(--#{$prefix}secondary-rgb), 0.03) 0px 1px 11px;
+    box-shadow: var(--#{$prefix}testimonial-box-shadow); 
+    background-color: var(--#{$prefix}body-bg);
+}
+
+.testimonial-3-wrapper{
+    --#{$prefix}testimonial-box-shadow: rgba(var(--bs-secondary-rgb), 0.08) 0px 0px 20px;
+    box-shadow: var(--#{$prefix}testimonial-box-shadow); 
+}
+
+.testimonial-author-review{
+    max-width: 430px;
+    @include media-breakpoint-down(xxl){
+        max-width: 340px;
+    }
+    @include media-breakpoint-down(xl){
+        max-width: 100%;
+    }
+}
+.testimonial-author-image{
+    --#{$prefix}testimonial-author-image-size: 90px;
+    width: var(--#{$prefix}testimonial-author-image-size);
+    height: var(--#{$prefix}testimonial-author-image-size);
+    &.testimonial-author-image-2{
+        --#{$prefix}testimonial-author-image-size: 60px;   
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+// === Testimonial ========================================= >>>>>
+
+
+
+// === testimonialSwiper ========================================= >>>>>
+.testimonialSwiper-buttons{
+    position: absolute;
+    width: 100%;
+    left: 70px;
+    z-index: 1;
+    justify-content: center;
+    bottom: 32px;
+    @include media-breakpoint-down(lg){
+        left: auto;
+        right: 0;
+        bottom: 24%;        
+        justify-content: end;
+    }
+    @include media-breakpoint-down(md){        
+        bottom: 27%;        
+    }
+    @include media-breakpoint-down(md){        
+        bottom: 32%;        
+    }
+}
+
+
+
+.testimonialSwiper-3-button{    
+    --#{$prefix}testimonialSwiper-3-button-size: 46px;
+    --#{$prefix}testimonialSwiper-3-button-position: -14px;
+    --#{$prefix}testimonialSwiper-3-button-bg: var(--#{$prefix}secondary);
+    width: var(--#{$prefix}testimonialSwiper-3-button-size);
+    height: var(--#{$prefix}testimonialSwiper-3-button-size);
+    background-color: var(--#{$prefix}testimonialSwiper-3-button-bg);
+    position: absolute;
+    top: calc(50% - (var(--#{$prefix}testimonialSwiper-3-button-size) * .5));
+    &.testimonialSwiper-3-button-prev{
+        left: var(--#{$prefix}testimonialSwiper-3-button-position);
+    }
+    &.testimonialSwiper-3-button-next{
+        right: var(--#{$prefix}testimonialSwiper-3-button-position);
+    }
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+        --#{$prefix}testimonialSwiper-3-button-bg: var(--#{$prefix}primary);
+    }
+
+    @include media-breakpoint-down(sm){        
+        --#{$prefix}testimonialSwiper-3-button-size: 40px;
+        --#{$prefix}testimonialSwiper-3-button-position: -8px;        
+    }
+}
+
+.testimonial-swiper-wrapper{
+    --swiper-theme-color: var(--#{$prefix}primary);
+    .swiper-pagination-bullets.swiper-pagination-horizontal{
+        bottom: -55px;
+        @include media-breakpoint-down(lg){
+            bottom: -45px;
+        }
+    }
+}
+
+.swiper-pagination-bullet{
+    --swiper-pagination-bullet-width: 16px;
+    --swiper-pagination-bullet-height: 16px;
+    --swiper-pagination-bullet-inactive-color: var(--#{$prefix}body-color-style-1);
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 12px;
+    @include media-breakpoint-down(xl){
+        --swiper-pagination-bullet-horizontal-gap: 8px;
+    }
+    @include media-breakpoint-down(md){
+        --swiper-pagination-bullet-horizontal-gap: 6px;
+        --swiper-pagination-bullet-width: 12px;
+        --swiper-pagination-bullet-height: 12px;
+    }
+}
+// === testimonialSwiper ========================================= >>>>>

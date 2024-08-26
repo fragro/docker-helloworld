@@ -1,0 +1,126 @@
+body{       
+    padding-right: 0 !important;  
+}
+
+.page{    
+    @include media-breakpoint-down(lg){
+        overflow-x: hidden;
+    }
+}
+
+:root{
+    --#{$prefix}primary: #FF3B3B;
+    --#{$prefix}primary-rgb: 255, 59, 59;
+    --#{$prefix}secondary: #190E4E;
+    --#{$prefix}secondary-rgb: 25, 14, 78;
+    
+    --#{$prefix}border-color: var(--#{$prefix}body-color-style-1);
+    --#{$prefix}border-width: 2px;
+
+    --#{$prefix}font-family-style-1: "Roboto", sans-serif;
+    --#{$prefix}font-family-style-2: "Nunito Sans", sans-serif;
+
+    --#{$prefix}link-color-rgb: var(--#{$prefix}primary-rgb);
+    --#{$prefix}link-color: var(--#{$prefix}primary);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}link-hover-color-rgb: var(--#{$prefix}primary-rgb);
+
+    --#{$prefix}body-color-style-1: #A4A0BA;
+    --#{$prefix}body-color-style-1-rgb: 164, 160, 186;
+
+    --#{$prefix}body-color-style-2: #EFEFF7;
+    --#{$prefix}body-color-style-2-rgb: 239, 239, 247;
+
+    --#{$prefix}bg-custom-light: #f9f9ff;
+    --#{$prefix}bg-custom-light-rgb: 249, 249, 255;
+
+    --#{$prefix}bg-custom-light-style-2: #EFEFF7;
+    --#{$prefix}bg-custom-light-style-2-rgb: 239, 239, 247;
+
+    --#{$prefix}heading-color-style-1: #4D447B;
+    --#{$prefix}heading-color-style-1-rgb: 77, 68, 123;
+}
+
+[data-bs-theme="light"]{
+    --#{$prefix}primary: #FF3B3B;
+    --#{$prefix}primary-rgb: 255, 59, 59;
+    --#{$prefix}secondary: #190E4E;
+    --#{$prefix}secondary-rgb: 25, 14, 78;
+    --#{$prefix}border-color: var(--#{$prefix}primary);
+
+    .form-control{
+        --#{$prefix}border-width: 0;
+    }
+}
+
+[data-bs-theme="dark"]{
+        --#{$prefix}heading-color-style-1: #EFEFF7;
+        --#{$prefix}heading-color-style-1-rgb: 239, 239, 247;
+        --#{$prefix}bg-custom-light: #000;
+        --#{$prefix}bg-custom-light-rgb: 0,0,0;
+
+        --#{$prefix}bg-custom-light-style-2: #000;
+        --#{$prefix}bg-custom-light-style-2-rgb: 0,0,0;
+       
+    .heading-color-style-1{
+        --#{$prefix}heading-color-style-1: #EFEFF7;
+        --#{$prefix}heading-color-style-1-rgb: 239, 239, 247;
+    }
+    .custom-shadow{
+        box-shadow: 0 3px 30px rgba(0,0,0, .3);
+    }
+    
+    .arrow-icon{
+        --#{$prefix}arrow-icon-stroke-color: #EFEFF7;           
+    }
+    .progress{
+        --#{$prefix}progress-bg: #696194;
+        --#{$prefix}progress-bar-bg: var(--#{$prefix}white);
+    }
+    .section-header{
+        --#{$prefix}header-box-shadow: 0 2px 10px rgba(var(--#{$prefix}white-rgb), .05); 
+    }        
+    .header-2{
+        --#{$prefix}header-bg: var(--#{$prefix}body-bg);
+    }
+    .check-circle-icon{
+        --#{$prefix}check-icon-stroke-color: #EFEFF7;     
+        --#{$prefix}check-icon-color: var(--#{$prefix}body-bg);    
+    }    
+    .btn-primary {
+        --#{$prefix}btn-hover-color: var(--#{$prefix}secondary);
+        --#{$prefix}btn-active-color: var(--#{$prefix}secondary); 
+        --#{$prefix}btn-hover-bg: var(--#{$prefix}white);
+        --#{$prefix}btn-active-bg: var(--#{$prefix}white);
+        --#{$prefix}btn-hover-border-color: var(--#{$prefix}white);   
+        --#{$prefix}btn-active-border-color: var(--#{$prefix}white); 
+    } 
+    .btn-outline-secondary {   
+        --#{$prefix}btn-border-color: var(--#{$prefix}body-color-style-1);
+        --#{$prefix}btn-hover-bg: var(--#{$prefix}primary);
+        --#{$prefix}btn-active-bg: var(--#{$prefix}primary);
+    }
+    .donate-wrapper{
+        background-color: var(--#{$prefix}secondary);
+        color: var(--#{$prefix}white);
+    }
+    .navbar {
+        --#{$prefix}navbar-color: var(--#{$prefix}white);
+    }
+    .card{       
+        --#{$prefix}card-box-shadow: rgba(var(--#{$prefix}white-rgb), 0.08) 0px 4px 5px;
+        &.card-shadow-style-1{
+            --#{$prefix}card-box-shadow: rgba(var(--#{$prefix}white-rgb), 0.08) 0px 4px 5px;
+        }
+        &.card-shadow-style-2{
+            --#{$prefix}card-box-shadow: rgba(var(--#{$prefix}white-rgb), 0.08) 0px 4px 5px;
+        }
+    }   
+    .top-bar-contact-lists{
+        --#{$prefix}link-color-rgb: var(--#{$prefix}white-rgb);
+        --#{$prefix}link-color: var(--#{$prefix}white);
+        --#{$prefix}link-hover-color: var(--#{$prefix}white);
+        --#{$prefix}link-hover-color-rgb: var(--#{$prefix}white-rgb);
+        --#{$prefix}top-bar-icons-color: var(--#{$prefix}white);
+    }
+}

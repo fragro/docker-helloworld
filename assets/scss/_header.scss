@@ -1,0 +1,149 @@
+// === Header-Section ========================================= >>>>>
+
+.section-header{
+    background-color: var(--#{$prefix}header-bg);
+    --#{$prefix}header-box-shadow: 0 4px 20px rgba(var(--#{$prefix}secondary-rgb), .065); 
+    transition: all .5s ease-in-out;
+    box-shadow: var(--#{$prefix}header-box-shadow);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+
+    &.sticky{     
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        top: 0;
+        left: 0;
+        animation: header-fadeInDown .7s ease-in-out 0s 1 normal none running;
+        transition: all .5s ease-in-out;
+        @keyframes header-fadeInDown {
+            0% {                
+                transform: translateY(-100%);
+            }
+            100% {                
+                transform: translateY(0);
+            }
+        }
+
+        .navbar-nav{
+            --#{$prefix}nav-link-padding-y: 1.65rem;
+            @include media-breakpoint-down(xl){        
+                --#{$prefix}nav-link-padding-y: 1px;        
+            }
+        }
+        .top-bar{
+            display: none;
+        }
+        
+    }
+}
+
+.header-1{
+    --#{$prefix}header-bg: var(--#{$prefix}body-bg);
+}
+.header-2{
+    --#{$prefix}header-bg: var(--#{$prefix}bg-custom-light);
+}
+.menu-uppercase{
+    .nav-link{
+        text-transform: uppercase;
+    }
+}
+// === Header-Section ========================================= >>>>>
+
+
+
+// === Navbar ========================================= >>>>>
+.navbar{
+    --#{$prefix}navbar-padding-y: 0;
+    --#{$prefix}navbar-color: var(--#{$prefix}heading-color-style-1);
+    --#{$prefix}navbar-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}navbar-active-color: var(--#{$prefix}primary);
+    .nav-link{
+        position: relative;
+        font-family: var(--#{$prefix}font-family-style-1);
+        transition: $transition-base;
+        --#{$prefix}navbar-padding-y: ;        
+        &.active{
+            --#{$prefix}nav-link-font-weight: 600;
+            overflow-x: hidden;
+            @include media-breakpoint-down(xl){        
+                overflow-x: visible;        
+            }
+            .dropdown-icon{
+                --#{$prefix}dropdown-icon-stroke-color: var(--#{$prefix}primary);
+            }
+            .nav-title{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -3px;
+                    width: 100%;
+                    height: 2px;
+                    background: var(--#{$prefix}primary);
+                }
+            }            
+        }        
+    }
+}
+.navbar-nav{
+    --#{$prefix}nav-link-padding-y: 2.282rem;
+    @include media-breakpoint-down(xxl){        
+        --#{$prefix}nav-link-padding-y: 1.8rem;        
+    }
+    @include media-breakpoint-down(xl){        
+        --#{$prefix}nav-link-padding-y: 1px;        
+    }
+}
+// === Navbar ========================================= >>>>>
+
+
+// === Top-Bar ========================================= >>>>>
+
+.top-bar{
+    .social-icons{
+        --#{$prefix}social-icons-size: 24px;
+    }
+}
+.top-bar-contact-lists{
+    --#{$prefix}link-color-rgb: var(--#{$prefix}secondary-rgb);
+    --#{$prefix}link-color: var(--#{$prefix}secondary);
+    --#{$prefix}link-hover-color: var(--#{$prefix}secondary);
+    --#{$prefix}link-hover-color-rgb: var(--#{$prefix}secondary-rgb);
+    --#{$prefix}top-bar-icons-color: var(--#{$prefix}primary);
+    .topbar-contact-icon{
+        --#{$prefix}contact-icon-stroke-color: var(--#{$prefix}top-bar-icons-color);
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;       
+        color: var(--#{$prefix}top-bar-icons-color);        
+        &.icon-border{
+            border: 1px solid var(--#{$prefix}top-bar-icons-color);
+            border-radius: 50%;        
+        }
+    }
+    &.contact-separator{
+        li{
+            border-right: 1px solid #fff;
+            padding-right: 20px;
+            &:last-child{
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+        @include media-breakpoint-down(lg){
+            li{
+                border-right: none;
+                padding-right: 0;            
+            }
+        }
+    }   
+}
+// === Top-Bar ========================================= >>>>>

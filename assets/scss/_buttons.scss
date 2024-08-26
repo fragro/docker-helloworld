@@ -1,0 +1,59 @@
+
+// === Buttons ========================================= >>>>>
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease-in-out;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;   
+    width: fit-content;
+}
+.btn-primary {
+    --#{$prefix}btn-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-border-color: var(--#{$prefix}primary);      
+    --#{$prefix}btn-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}secondary);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}secondary);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-active-color: var(--#{$prefix}white); 
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}secondary);   
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}secondary); 
+}
+.btn-outline-secondary {
+    --#{$prefix}btn-bg: transparent;
+    --#{$prefix}btn-color: var(--#{$prefix}heading-color);    
+    --#{$prefix}btn-border-color: var(--#{$prefix}body-color-style-2);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-active-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}primary);  
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}primary);  
+}
+.btn-white {
+    --#{$prefix}btn-bg: var(--#{$prefix}white);
+    --#{$prefix}btn-border-color: var(--#{$prefix}white);      
+    --#{$prefix}btn-color: var(--#{$prefix}secondary);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}white);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-color: var(--#{$prefix}primary); 
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}white);   
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}white);  
+}
+.btn-sm{
+    --#{$prefix}btn-font-weight: 500;
+    --#{$prefix}btn-font-size: 14px;
+}
+.btn-lg{
+    --#{$prefix}btn-padding-y: 1.032rem;
+    --#{$prefix}btn-padding-x: 2.022rem;
+    --#{$prefix}btn-font-size: 18px;
+}
+.btn-reply{
+    --#{$prefix}btn-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-padding-y: .35rem;
+}
+// === Buttons ========================================= >>>>>
