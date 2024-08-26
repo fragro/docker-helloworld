@@ -1,8 +1,5 @@
-############################################################
 # Dockerfile to build Nginx Installed Containers
 # Based on Ubuntu
-############################################################
-
 
 # Set the base image to Ubuntu
 FROM ubuntu
@@ -10,29 +7,32 @@ FROM ubuntu
 # File Author / Maintainer
 MAINTAINER Karthik Gaekwad
 
-# Install Nginx
-
-# Add application repository URL to the default sources
-# RUN echo "deb http://archive.ubuntu.com/ubuntu/ raring main universe" >> /etc/apt/sources.list
-
-# Update the repository
-RUN apt-get update
-
-# Install necessary tools
-RUN apt-get install -y vim wget dialog net-tools
-
-RUN apt-get install -y nginx
+# Update the repository and install Nginx
+RUN apt-get update && \
+    apt-get install -y vim wget dialog net-tools nginx && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # Remove the default Nginx configuration file
 RUN rm -v /etc/nginx/nginx.conf
 
 # Copy a configuration file from the current directory
-ADD nginx.conf /etc/nginx/
+COPY nginx.conf /etc/nginx/
 
 RUN mkdir /etc/nginx/logs
 
-# Add a sample index file
-ADD . /www/data/
+# Create a directory for your web content
+RUN mkdir -p /www/data
+
+# Copy all HTML files to the container
+COPY *.html /www/data/
+
+# Copy the assets directory
+COPY assets/ /www/data/assets/
+
+# If you have other directories or files, add them here
+# COPY other_directory/ /www/data/other_directory/
+# COPY other_file.ext /www/data/
 
 # Append "daemon off;" to the beginning of the configuration
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
