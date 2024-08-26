@@ -1,0 +1,63 @@
+{
+  "name": "politixy",
+  "version": "1.0.0",
+  "description": "Politixy HTML template",
+  "main": "index.js",
+  "author": "senseflame",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senseflame/politixy-html.git"
+  },
+  "bugs": {
+    "url": "https://github.com/senseflame/politixy-html/issues"
+  },
+  "homepage": "https://github.com/senseflame/politixy-html#readme",
+  "scripts": {
+    "build": "npm run css",
+    "css-compile": "node-sass --include-path node_modules --output-style expanded --source-map true --source-map-contents true --precision 6 assets/scss/ -o assets/css/",
+    "css-lint": "stylelint scss/",
+    "css-prefix": "postcss --replace assets/css/style.css --use autoprefixer --map",
+    "css-purge": "purgecss --keyframes --css assets/css/style.css --content index.html \"node_modules/bootstrap/js/dist/{util,modal}.js\" --output assets/css/",
+    "css": "npm-run-all css-compile css-prefix css-rtl",
+    "css-rtl": "rtlcss assets/css/style.css assets/css/style.rtl.css",
+    "server": "live-server --port=3000",
+    "start": "npm-run-all --parallel watch server",
+    "watch": "nodemon -e html,scss -x \"npm run css\"",
+    "test": "npm run css-lint && npm run css"
+  },
+  "keywords": [
+    "bootstrap",
+    "sass",
+    "css",
+    "javascript",
+    "event",
+    "template"
+  ],
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "bootstrap": "^5.3.1",
+    "jquery": "^3.7.0",
+    "live-server": "^1.1.0",
+    "node-sass": "^8.0.0",
+    "nodemon": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.28",
+    "postcss-cli": "^10.1.0",
+    "purgecss": "^5.0.0",    
+    "rtlcss": "^4.0.0"    
+  },
+  "rtlcssConfig" : {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  }
+}

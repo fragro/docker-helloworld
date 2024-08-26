@@ -1,0 +1,9 @@
+Project: Politixy
+Changelog:
+1.1.1 - 22th August, 2024
+1. Update Home 3
+2. Update Header-section
+3. Update Hero sections
+4. Update Product Single Page
+5. Update Blog sections
+6. Added Cart & Checkout Pages
