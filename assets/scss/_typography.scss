@@ -11,7 +11,7 @@ body{
 :root{
     --#{$prefix}primary: #FF3B3B;
     --#{$prefix}primary-rgb: 255, 59, 59;
-    --#{$prefix}secondary: #190E4E;
+    --#{$prefix}secondary: #29415b;
     --#{$prefix}secondary-rgb: 25, 14, 78;
     
     --#{$prefix}border-color: var(--#{$prefix}body-color-style-1);
@@ -44,7 +44,7 @@ body{
 [data-bs-theme="light"]{
     --#{$prefix}primary: #FF3B3B;
     --#{$prefix}primary-rgb: 255, 59, 59;
-    --#{$prefix}secondary: #190E4E;
+    --#{$prefix}secondary: #29415b;
     --#{$prefix}secondary-rgb: 25, 14, 78;
     --#{$prefix}border-color: var(--#{$prefix}primary);
 
