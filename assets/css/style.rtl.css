@@ -9149,10 +9149,6 @@ textarea {
   z-index: 1;
 }
 
-.volunteer-wrapper .volunteer-inner {
-  max-width: 682px;
-}
-
 .donate-2 {
   --bs-donate-box-shadow: rgba(var(--bs-secondary-rgb), 0.07) 0px 6px 20px;
   --bs-donate-wrapper-position: -104px;

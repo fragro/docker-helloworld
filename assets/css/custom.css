@@ -1,2 +1,22 @@
 
 /*# sourceMappingURL=custom.css.map */
+
+.donate-wrapper {
+  --bg-parallax-image: url(../images/donate-bg.jpg);
+  --bg-parallax-opacity: 1;
+}
+
+.donate-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--bs-secondary-rgb), 0.9);
+  z-index: 1;
+}
+
+.donate-wrapper .donate-inner {
+  max-width: 682px;
+}
